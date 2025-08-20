@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeLearn - Master Programming Languages</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-code"></i>
+                <span>CodeLearn</span>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#languages" class="nav-link">Languages</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#courses" class="nav-link">Courses</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#practice" class="nav-link">Practice</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="hero-container">
+            <div class="hero-content">
+                <h1 class="hero-title">Learn Programming the <span class="highlight">Right Way</span></h1>
+                <p class="hero-description">
+                    Master popular programming languages with interactive lessons, real-world projects, 
+                    and hands-on practice. Start your coding journey today!
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" onclick="scrollToSection('languages')">
+                        <i class="fas fa-rocket"></i>
+                        Get Started
+                    </button>
+                    <button class="btn btn-secondary" onclick="scrollToSection('courses')">
+                        <i class="fas fa-play"></i>
+                        Explore Courses
+                    </button>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="code-animation">
+                    <div class="code-line">
+                        <span class="keyword">function</span> 
+                        <span class="function">learnProgramming</span>() {
+                    </div>
+                    <div class="code-line">
+                        &nbsp;&nbsp;<span class="keyword">return</span> 
+                        <span class="string">"Success!"</span>;
+                    </div>
+                    <div class="code-line">}</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Languages Section -->
+    <section id="languages" class="languages">
+        <div class="container">
+            <div class="section-header">
+                <h2>Popular Programming Languages</h2>
+                <p>Choose from our curated selection of beginner-friendly languages</p>
+            </div>
+            <div class="languages-grid">
+                <div class="language-card" onclick="openLanguage('html')">
+                    <div class="language-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML & CSS</h3>
+                    <p>Build beautiful websites with the foundation of web development</p>
+                    <div class="language-stats">
+                        <span class="difficulty easy">Beginner</span>
+                        <span class="duration">4 weeks</span>
+                    </div>
+                </div>
+                <div class="language-card" onclick="openLanguage('javascript')">
+                    <div class="language-icon">
+                        <i class="fab fa-js-square"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Create interactive web applications and dynamic content</p>
+                    <div class="language-stats">
+                        <span class="difficulty medium">Intermediate</span>
+                        <span class="duration">6 weeks</span>
+                    </div>
+                </div>
+                <div class="language-card" onclick="openLanguage('python')">
+                    <div class="language-icon">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3>Python</h3>
+                    <p>Learn the most versatile language for beginners</p>
+                    <div class="language-stats">
+                        <span class="difficulty easy">Beginner</span>
+                        <span class="duration">8 weeks</span>
+                    </div>
+                </div>
+                <div class="language-card" onclick="openLanguage('java')">
+                    <div class="language-icon">
+                        <i class="fab fa-java"></i>
+                    </div>
+                    <h3>Java</h3>
+                    <p>Build robust applications with object-oriented programming</p>
+                    <div class="language-stats">
+                        <span class="difficulty medium">Intermediate</span>
+                        <span class="duration">10 weeks</span>
+                    </div>
+                </div>
+                <div class="language-card" onclick="openLanguage('swift')">
+                    <div class="language-icon">
+                        <i class="fab fa-swift"></i>
+                    </div>
+                    <h3>Swift</h3>
+                    <p>Develop iOS and macOS applications</p>
+                    <div class="language-stats">
+                        <span class="difficulty medium">Intermediate</span>
+                        <span class="duration">8 weeks</span>
+                    </div>
+                </div>
+                <div class="language-card" onclick="openLanguage('cpp')">
+                    <div class="language-icon">
+                        <i class="fas fa-copyright"></i>
+                    </div>
+                    <h3>C++</h3>
+                    <p>Master system programming and game development</p>
+                    <div class="language-stats">
+                        <span class="difficulty hard">Advanced</span>
+                        <span class="duration">12 weeks</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Courses Section -->
+    <section id="courses" class="courses">
+        <div class="container">
+            <div class="section-header">
+                <h2>Structured Learning Paths</h2>
+                <p>Follow our carefully designed curriculum to master programming fundamentals</p>
+            </div>
+            <div class="courses-tabs">
+                <button class="tab-btn active" onclick="showCourseTab('fundamentals')">Fundamentals</button>
+                <button class="tab-btn" onclick="showCourseTab('web')">Web Development</button>
+                <button class="tab-btn" onclick="showCourseTab('mobile')">Mobile Development</button>
+                <button class="tab-btn" onclick="showCourseTab('advanced')">Advanced Topics</button>
+            </div>
+            <div class="courses-content">
+                <div id="fundamentals" class="course-tab active">
+                    <div class="course-grid">
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>Programming Basics</h3>
+                                <span class="course-level">Level 1</span>
+                            </div>
+                            <ul class="course-topics">
+                                <li><i class="fas fa-check"></i> Variables and Data Types</li>
+                                <li><i class="fas fa-check"></i> Control Structures</li>
+                                <li><i class="fas fa-check"></i> Functions and Methods</li>
+                                <li><i class="fas fa-check"></i> Basic Algorithms</li>
+                            </ul>
+                            <button class="btn btn-outline">Start Learning</button>
+                        </div>
+                        <div class="course-card">
+                            <div class="course-header">
+                                <h3>Object-Oriented Programming</h3>
+                                <span class="course-level">Level 2</span>
+                            </div>
+                            <ul class="course-topics">
+                                <li><i class="fas fa-check"></i> Classes and Objects</li>
+                                <li><i class="fas fa-check"></i> Inheritance</li>
+                                <li><i class="fas fa-check"></i> Polymorphism</li>
+                                <li><i class="fas fa-check"></i> Encapsulation</li>
+                            </ul>
+                            <button class="btn btn-outline">Start Learning</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Practice Section -->
+    <section id="practice" class="practice">
+        <div class="container">
+            <div class="section-header">
+                <h2>Interactive Practice</h2>
+                <p>Reinforce your learning with hands-on coding exercises</p>
+            </div>
+            <div class="practice-grid">
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Code Challenges</h3>
+                    <p>Solve real-world problems with guided exercises</p>
+                    <button class="btn btn-primary">Start Challenges</button>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Mini Projects</h3>
+                    <p>Build complete applications from scratch</p>
+                    <button class="btn btn-primary">View Projects</button>
+                </div>
+                <div class="practice-card">
+                    <div class="practice-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Code Reviews</h3>
+                    <p>Get feedback from experienced developers</p>
+                    <button class="btn btn-primary">Submit Code</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="about-content">
+                <div class="about-text">
+                    <h2>Why Choose CodeLearn?</h2>
+                    <div class="features">
+                        <div class="feature">
+                            <i class="fas fa-graduation-cap"></i>
+                            <div>
+                                <h4>Structured Learning</h4>
+                                <p>Follow a proven curriculum designed by industry experts</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-hands-helping"></i>
+                            <div>
+                                <h4>Hands-on Practice</h4>
+                                <p>Learn by doing with interactive exercises and real projects</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-clock"></i>
+                            <div>
+                                <h4>Learn at Your Pace</h4>
+                                <p>Study whenever and wherever you want, at your own speed</p>
+                            </div>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-certificate"></i>
+                            <div>
+                                <h4>Earn Certificates</h4>
+                                <p>Get recognized for your achievements with completion certificates</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <h3>10K+</h3>
+                        <p>Students</p>
+                    </div>
+                    <div class="stat">
+                        <h3>50+</h3>
+                        <p>Courses</p>
+                    </div>
+                    <div class="stat">
+                        <h3>95%</h3>
+                        <p>Success Rate</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <i class="fas fa-code"></i>
+                        <span>CodeLearn</span>
+                    </div>
+                    <p>Empowering beginners to become confident programmers through structured learning and hands-on practice.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#languages">Languages</a></li>
+                        <li><a href="#courses">Courses</a></li>
+                        <li><a href="#practice">Practice</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Languages</h4>
+                    <ul>
+                        <li><a href="#">HTML & CSS</a></li>
+                        <li><a href="#">JavaScript</a></li>
+                        <li><a href="#">Python</a></li>
+                        <li><a href="#">Java</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Connect</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 CodeLearn. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Language Modal -->
+    <div id="languageModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div id="modalContent"></div>
+        </div>
+    </div>
+
+    <script src="lessons.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+{
+  "name": "codelearn",
+  "version": "1.0.0",
+  "description": "A modern programming learning platform for beginners",
+  "main": "index.html",
+  "scripts": {
+    "start": "python -m http.server 8000",
+    "dev": "live-server --port=8000",
+    "build": "echo 'Build process would go here'",
+    "test": "echo 'Tests would go here'"
+  },
+  "keywords": [
+    "programming",
+    "learning",
+    "education",
+    "coding",
+    "web-development",
+    "javascript",
+    "python",
+    "java",
+    "swift",
+    "html",
+    "css"
+  ],
+  "author": "CodeLearn Team",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/yourusername/codelearn.git"
+  },
+  "bugs": {
+    "url": "https://github.com/yourusername/codelearn/issues"
+  },
+  "homepage": "https://github.com/yourusername/codelearn#readme",
+  "devDependencies": {
+    "live-server": "^1.2.2"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead"
+  ]
+}
